@@ -1,0 +1,16 @@
+You have currently two posts in the blog site .
+
+
+1. HELLO-WORLD ->
+2. YET ANOTHER POST->
+
+or both of these posts, wordpress looks for a file called single.php,
+which is where it takes you when you click the link.
+
+-> otherwise it will fallback to the index.php in the current theme directory.
+
+------------------------------------------------------------------------------------
+
+Diff bw PAGES and posts.
+
+-> all pages will use the_LOOP
