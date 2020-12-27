@@ -2,11 +2,11 @@
 
     <div class="site-footer__inner container container--narrow">
 
-      <div class="group">
+      <!-- <div class="group">
 
         <div class="site-footer__col-one">
           <h1 class="school-logo-text school-logo-text--alt-color"><a href="#"><strong>IoT</strong> Embedded Systems</a></h1>
-          <p><a class="site-footer__link" href="#">555.555.5555</a></p>
+          <p><a class="site-footer__link" href="#"></a></p>
         </div>
 
         <div class="site-footer__col-two-three-group">
@@ -32,7 +32,7 @@
               </ul>
             </nav>
           </div>
-        </div>
+        </div> -->
 
         <div class="site-footer__col-four">
           <h3 class="headline headline--small">Connect With Us</h3>

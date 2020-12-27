@@ -1108,7 +1108,7 @@ Author: Anurag
     }
   .main-navigation .current-menu-item a,
   .main-navigation a:hover {
-    color: #FAF0CA;
+    color: black;
   }
   .page-banner {
     background-color: #000;
