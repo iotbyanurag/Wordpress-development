@@ -1,5 +1,5 @@
 
 ## Working on webpages bit by bit
-![GitHub Logo](/images/working-pages-4JAN)
+![NavBar](/images/working-pages-4JAN.jpg)
 * LANDING PAGE
 * NAVBAR ELEMENTS 
