@@ -192,19 +192,59 @@
     <section class="ftco-section ftco-no-pt ftco-no-pb">
         <div class="container">
             <div class="row d-flex">
-                <div class="col-xl-8 py-5 px-md-5">
-                    <div class="alert alert-success" role="alert">
-                        <h4 class="alert-heading">Well done!</h4>
-                        <p>Aww yeah, you successfully read this important alert message. This example text is going to
-                            run a
-                            bit
-                            longer
-                            so
-                            that you can see how spacing within an alert works with this kind of content.</p>
-                        <hr>
-                        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and
-                            tidy.
-                        </p>
+                <div class="col-xl-9 py-5 px-md-5">
+
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel"
+                        data-interval="500">
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Embedded Product  -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/EMbedded-Product.jpg"
+                                    class="d-block w-100" />
+
+                                <div class="carousel-caption d-none d-md-block " id="xyzzz1">
+                                    <h5 id="ppp1">Product Design Services From Scratch</h5>
+                                    <p>Turn your product ideas into reality</p>
+                                </div>
+                            </div>
+                            <!-- web-apps design -->
+                            <div class="carousel-item">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/web-apps-design.jpg"
+                                    class="d-block w-100" />
+
+                                <div class="carousel-caption d-none d-md-block " id="xyzzz2">
+                                    <h5 id="ppp2">Web Apps Design</h5>
+                                    <p>Web Apps design and hosting services</p>
+                                </div>
+                            </div>
+
+                            <!-- PCB prototyping -->
+                            <div class="carousel-item ">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/my-board.jpg"
+                                    class="d-block w-100" />
+
+                                <div class="carousel-caption d-none d-md-block" id="xyzzz3">
+                                    <h5 id="ppp3">PCB prototyping Services</h5>
+                                    <p>Custom board design Hardware and Firmware for Embedded Systems</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -214,7 +254,6 @@
 
 <?php }
     ?>
-
 
 <?php
       get_footer();

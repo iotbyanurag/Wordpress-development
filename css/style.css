@@ -8106,3 +8106,18 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+#xyzzz1, #xyzzz2, #xyzzz3{
+  background-color:  rgba(0, 0, 0, 0.4) !important;
+  z-index: 990 !important;
+}
+#ppp1, #ppp2, #ppp3{
+  color: white !important;
+  z-index: 990 !important;
+}
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(10%);
+}
+
+
