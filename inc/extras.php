@@ -263,48 +263,6 @@ if ( ! function_exists( 'creative_blog_menu_filter' ) ) :
 
 endif;
 
-add_action( 'creative_blog_footer_copyright', 'creative_blog_footer_copyright', 10 );
-/**
- * function to show the footer info, copyright information
- */
-if ( ! function_exists( 'creative_blog_footer_copyright' ) ) :
-
-	function creative_blog_footer_copyright() {
-		$site_link = '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" ><span>' . get_bloginfo( 'name', 'display' ) . '</span></a>';
-
-		$wp_link = '<a href="' . esc_url( 'https://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'creative-blog' ) . '"><span>' . esc_html__( 'WordPress', 'creative-blog' ) . '</span></a>';
-
-		$my_link_name = '<a href="' . esc_url( 'https://napitwptech.com/themes/creative-blog/' ) . '" target="_blank" title="' . esc_attr__( 'Bishal Napit', 'creative-blog' ) . '"><span>' . esc_html__( 'Bishal Napit', 'creative-blog' ) . '</span></a>';
-
-		$default_footer_value = sprintf( esc_html__( 'Copyright &copy; %1$s %2$s.', 'creative-blog' ), date( 'Y' ), $site_link ) . ' ' . sprintf( esc_html__( 'Theme: %1$s by %2$s.', 'creative-blog' ), esc_html__( 'Creative Blog', 'creative-blog' ), $my_link_name ) . ' ' . sprintf( esc_html__( 'Powered by %s.', 'creative-blog' ), $wp_link );
-
-		$creative_blog_footer_copyright = '<div class="copyright col-md-12">' . $default_footer_value . '</div>';
-		echo $creative_blog_footer_copyright;
-	}
-
-endif;
-
-add_action( 'wp_head', 'creative_blog_custom_css', 100 );
-
-/**
- * Hooks the Custom Internal CSS to head section
- */
-function creative_blog_custom_css() {
-	// changing color options
-	$creative_blog_custom_options_color = '';
-	$primary_color                      = get_theme_mod( 'creative_blog_primary_color', '#0099ff' );
-	if ( $primary_color != '#0099ff' ) {
-		$creative_blog_custom_options_color .= 'a,a:focus,a:hover{color:' . $primary_color . '}td,th,tr{border:2px solid ' . $primary_color . '}.date-in-header{background-color:' . $primary_color . '}.navigation .nav-next:after,.navigation .nav-previous:before,.newsticker a{color:' . $primary_color . '}.search-field{border:1px solid ' . $primary_color . '}.searchsubmit{background-color:' . $primary_color . '}#menu-social li a::before{color:' . $primary_color . '}.post,.search .page{border-bottom:1px solid ' . $primary_color . '}.custom-page-header .page-title{border-bottom:2px solid ' . $primary_color . '}.custom-page-header .page-title span{background:' . $primary_color . '}.continue-more-link,.continue-more-link:hover,.sticky .continue-more-link,.sticky .continue-more-link:hover{background:' . $primary_color . '}.entry-meta{border-bottom:1px dotted ' . $primary_color . ';border-top:1px dotted ' . $primary_color . '}.category-links a{background-color:' . $primary_color . '}.comments-link,.tags-links .fa{color:' . $primary_color . '}.comment-respond .form-submit input[type=submit]{background:' . $primary_color . '}.comment-author,.comments-area .comment-meta .edit-link:before{color:' . $primary_color . '}.author-box{border:1px dotted ' . $primary_color . '}.featured-image img{border:1px solid ' . $primary_color . '}.format-status .status-details{border-top:1px solid ' . $primary_color . ';border-bottom:1px solid ' . $primary_color . '}a#scroll-up i{color:' . $primary_color . '}.widget-title span{background-color:' . $primary_color . '}.widget-title{border-bottom:2px solid ' . $primary_color . '}.widget_nav_menu a,.widget_pages a,.widget_recent_comments li,.widget_recent_entries li{border-bottom:2px dotted ' . $primary_color . '}.widget_archive li:before,.widget_categories li:before,.widget_nav_menu li:before,.widget_pages li:before,.widget_recent_comments li:before,.widget_recent_entries li:before,.widget_rss li:before{color:' . $primary_color . '}.wp-caption{border:1px solid ' . $primary_color . '}input[type=submit],input[type=reset],.wp-custom-header-video-button{background-color:' . $primary_color . ';border:1px solid ' . $primary_color . '}input[type=file]{background-color:' . $primary_color . '}.content-top-sidebar{border-bottom:1px solid ' . $primary_color . '}.content-bottom-sidebar{border-top:1px solid ' . $primary_color . '}.sticky{background:' . $primary_color . '}.sticky .category-links a{color:' . $primary_color . '}.format-chat .chat-details{background-color:' . $primary_color . '}.format-link .link-details{background-color:' . $primary_color . '}.format-quote .quote-details{background-color:' . $primary_color . '}.sticky .category-links a:hover{color:' . $primary_color . '}.related-posts-main-title span{background:' . $primary_color . '}.related-posts-main-title{border-bottom:2px solid ' . $primary_color . '}';
-	}
-
-	// color change options code
-	if ( ! empty( $creative_blog_custom_options_color ) ) {
-		echo '<!-- ' . get_bloginfo( 'name' ) . ' Internal Styles -->';
-		?>
-		<style type="text/css"><?php echo esc_html( $creative_blog_custom_options_color ); ?></style>
-		<?php
-	}
-}
 
 /**
  * Controlling the excerpt length
